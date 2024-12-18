@@ -42,14 +42,9 @@ public class ReportsController {
             @RequestParam("text") String text) {
         
         try {
-            // Convert JSON string into UserProfile object
             ObjectMapper objectMapper = new ObjectMapper();
             UserRequest userProfile = objectMapper.readValue(text, UserRequest.class);
             
-//            // Save the userProfile object to the database
-//            userProfileRepository.save(userProfile);
-            
-            // Handle file (if needed)
             String fileName = file.getOriginalFilename();
             
             System.out.println(userProfile);
